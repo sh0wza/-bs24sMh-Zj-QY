@@ -1,0 +1,322 @@
+@media (max-width: 1080px){
+    html{
+        font-size: 93.75%;
+    }
+}
+
+@media (max-width: 720px){
+    html{
+        font-size: 87.5%;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html, body {
+    font-size: 1rem;
+    background-image: url("/assets/images/bg.jpg");
+    background-attachment: fixed;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header, footer {
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.headerbox {
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    text-align: center;
+}
+
+.headertext {
+    color: #ffffff;
+    font-size: 15px;
+    margin: 15px 0px 15px 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.firstsession {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.imgsecret {
+    margin-top: 24px;
+    width: 520px;
+}
+
+.headline {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    max-width: 760px;
+    text-align: center;
+}
+
+.botão {
+    background: #db34c9;
+    border: none;
+    border-radius: 2rem;
+    width: 420px;
+    height: 65px;
+    cursor: pointer;
+    box-shadow: 4px 5px 15px rgb(0 0 0 / 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.botãotext {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.botãowarn {
+    font-size: 13px;
+    color: #e49fdd;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.calltoaction01 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.bandeiras {
+    height: 27px;
+    margin: 0px 5px;
+}
+
+.fb-comments {
+    max-width: 720px;
+    background-color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    border: 1px solid #e9ebee;
+    border-radius: 3px;
+    padding: 0 15px;
+    padding-bottom: 15px;
+    margin: auto;
+    position: relative;
+    color: #4267b2;
+}
+
+.fb-comments-header {
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ebee;
+}
+
+.fb-comments-header span {
+    color: #000;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+.fb-comments-comment {
+    border: none;
+    padding: 0;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.fb-comments-reply-wrapper {
+    margin-left: 60px;
+    border-left: 1px dotted #e9ebee;
+    padding-left: 5px;
+}
+
+tr,
+td {
+    border: none;
+    margin: 0;
+}
+
+td {
+    padding: 2.5px;
+}
+
+tr {
+    padding: 2.5px 0;
+}
+
+.fb-comments-comment-img {
+    vertical-align: top;
+    width: 48px;
+    padding-right: 5px;
+}
+
+.fb-comments-comment-img img {
+    max-width: 48px;
+    border-radius: 25px;
+}
+
+.fb-comments-comment-name {
+    font-size: 0.85em;
+}
+
+.fb-comments-comment-name name {
+    color: #365899;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.fb-comments-comment-name name:hover {
+    text-decoration: underline;
+}
+
+.fb-comments-comment-name occupation {
+    color: #90949c;
+}
+
+.fb-comments-comment-text {
+    font-size: 0.9em;
+    color: #000;
+    border-radius: 21px;
+    background-color: #eaebef;
+    padding: 10px 20px;
+}
+
+.fb-comments-comment-actions like,
+.fb-comments-comment-actions reply {
+    font-size: 0.75em;
+    color: #4267b2;
+    text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.fb-comments-comment-actions like.liked {
+    color: #90949c;
+}
+
+.fb-comments-comment-actions like:hover,
+.fb-comments-comment-actions reply:hover {
+    text-decoration: underline;
+}
+
+.fb-comments-comment-actions likes {
+    font-size: 13px;
+    background: url(https://cloudcode.site/likes.png);
+    background-repeat: no-repeat;
+    padding-left: 43px;
+    padding-right: 6px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    margin-top: -10px;
+    float: right;
+    background-color: #fff;
+    border: solid #eaebef;
+    border-radius: 19px;
+}
+
+.fb-comments-comment-actions date {
+    font-size: 0.75em;
+    color: #90949c;
+    text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.fb-comments-comment-actions date:hover {
+    text-decoration: underline;
+}
+
+.fb-comments-loadmore {
+    background: #4080ff;
+    border: 1px solid #4080ff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 14px;
+    padding: 0.875em;
+    text-shadow: none;
+    width: 100%;
+    font-weight: 700;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.fb-reply-input {
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    width: 100%;
+    padding: 5px 7.5px;
+    font-size: 0.75em;
+    color: #000;
+    outline: none;
+}
+
+.fb-reply-input:hover,
+.fb-reply-button:hover {
+    outline: none;
+}
+
+.fb-reply-button {
+    background: #4080ff;
+    border: 1px solid #4080ff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 0.75em;
+    padding: 5px 7.5px;
+    text-shadow: none;
+    width: 100%;
+    font-weight: 700;
+    cursor: hand;
+    cursor: pointer;
+    outline: none;
+}
+
+.footerbox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: #000000;
+    justify-content: center;
+}
+
+.footertext {
+    color: #ffffff;
+    font-size: 13px;
+    margin: 13px 6.5px 13px 6.5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.footerhover:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
