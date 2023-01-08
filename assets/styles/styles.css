@@ -1,34 +1,41 @@
-@media (max-width: 1080px){
+@media (max-width: 768px){
     html{
         font-size: 93.75%;
     }
 }
 
-@media (max-width: 720px){
+@media (max-width: 540px){
     html{
         font-size: 87.5%;
     }
 }
 
-*{
+@media (max-width: 360px){
+    html{
+        font-size: 81.25%;
+    }
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a {
     text-decoration: none;
 }
 
 html, body {
-    font-size: 1rem;
-    background-image: url("/assets/images/bg.jpg");
-    background-attachment: fixed;
     height: 100%;
 }
 
 body {
+    background-image: url("/assets/images/bg.jpg") ;
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    margin: 0;
-    min-height: 100vh;
 }
 
 header, footer {
@@ -39,7 +46,9 @@ main {
     flex-grow: 1;
 }
 
-.headerbox {
+/* Header */
+#headerbox {
+    width: 100%;
     display: flex;
     background-color: #000000;
     justify-content: center;
@@ -48,78 +57,89 @@ main {
 
 .headertext {
     color: #ffffff;
-    font-size: 15px;
-    margin: 15px 0px 15px 0px;
+    font-size: 0.9375rem;
+    margin: 0.9375rem 0;
+    padding: 0 12px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
 }
 
+/* Main */
 .firstsession {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    max-width: 730px;
+    width: 100%;
+    margin: 24px auto;
+    padding: 0 15px;
 }
 
 .imgsecret {
-    margin-top: 24px;
-    width: 520px;
+    max-width: 568px;
+    width: 100%;
 }
 
 .headline {
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 30px;
-    max-width: 760px;
+    font-size: min(1.875rem, 5vw);
     text-align: center;
-}
-
-.botão {
-    background: #db34c9;
-    border: none;
-    border-radius: 2rem;
-    width: 420px;
-    height: 65px;
-    cursor: pointer;
-    box-shadow: 4px 5px 15px rgb(0 0 0 / 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.botãotext {
-    font-size: 18px;
-    font-weight: 400;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-}
-
-.botãowarn {
-    font-size: 13px;
-    color: #e49fdd;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.calltoaction01 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 12px;
     margin: 24px 0;
+}
+
+.vslvid{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .vslvid iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.calltoaction01, .calltoaction02{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    padding: 0 15px;
+}
+
+.calltoaction02{
+    margin-bottom: 33px;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #db34c9;
+    color: #fff!important;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: min(18px, 4vw);
+    font-weight: 500;
+    box-shadow: 4px 5px 15px rgb(0 0 0 / 0.3);
+    text-shadow: 2px 2px 3px rgb(0 0 0 / 0.2);
+    margin-bottom: -15px;
 }
 
 .bandeiras {
     height: 27px;
     margin: 0px 5px;
+    margin-bottom: -30px;
 }
 
 .fb-comments {
-    max-width: 720px;
+    max-width: 700px;
     background-color: #ffffff;
     font-family: 'Helvetica', sans-serif;
     border: 1px solid #e9ebee;
@@ -307,7 +327,7 @@ tr {
     justify-content: center;
 }
 
-.footertext {
+.footer {
     color: #ffffff;
     font-size: 13px;
     margin: 13px 6.5px 13px 6.5px;
@@ -316,7 +336,7 @@ tr {
     cursor: pointer;
 }
 
-.footerhover:hover {
+.footer:hover {
     text-decoration: underline;
     color: #ffffff;
 }
