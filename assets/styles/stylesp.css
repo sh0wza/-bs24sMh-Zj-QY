@@ -1,0 +1,12 @@
+body {
+    background-image: url("/assets/images/bg.jpg") ;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 5px;
+}
