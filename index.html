@@ -9,25 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Open+Sans&display=swap" rel="stylesheet">
-
     <link rel="Shortcut Icon" type="image/png" href="/assets/images/favicon.png">
-
     <title>Qualidades Secretas</title>
     <link rel="stylesheet" href="/assets/styles/styles.css">
-
-    <!--INÍCIO DO SCRIPT-->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script>$.get("https://ipinfo.io/json", function (response) { $("#address").html(response.city);
-    }, "jsonp");
-    </script>
-
-    <!--FIM DO SCRIPT-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header id="headerbox">
-        <h1 class="headertext">Você e algumas mulheres próximas de <span id="address" style="color: #ff0000;"/> foram selecionadas para participar deste programa.</h1>
+        <h1 class="headertext">Você e algumas mulheres próximas de <span class="city"></span> foram selecionadas para participar deste programa.</h1>
+        <script>
+          $(document).ready(function() {
+              $.get("https://ipinfo.io/json?token=423ec298ae0707",function(response) {
+                  console.log(response);
+                  $(".city").html(response.city)
+              },"jsonp")
+          });
+        </script>
     </header>
 
     <main>
