@@ -480,12 +480,12 @@ tr {
     color: #90949c;
 }
 
-.fb-comments-comment-text span {
+.fb-comments-comment-text marca {
     color: #4267b2;
     cursor: pointer;
 }
 
-.fb-comments-comment-text span:hover {
+.fb-comments-comment-text marca:hover {
     text-decoration: underline;
 }
 
