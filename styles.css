@@ -11,67 +11,107 @@ body {
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     position: fixed;
     align-items: center;
     justify-content: center;
 }
 
-.elementos {
+footer {
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px 0;
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 100px;
+    width: min(300px, 60vw);
 }
 
 .box {
-    gap: 15px;
-    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: min(25rem, 90vw);
-    border-radius: 10px;
-    padding: 20px 0;
-    box-shadow: 4px 5px 40px rgb(0 0 0 / 0.3);
+    gap: 20px;
 }
 
-.linha-01 {
-    text-align: center;
+.num {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.pergunta h1 {
+    font-size: min(24px, 5vw);
+    color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: min(2rem, 10vw);
+    max-width: min(930px, 90vw);
+    text-align: center;
 }
 
-.linha-02 {
-    text-align: center;
-    text-align: center;
+.resposta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    width: min(300px, 80vw);
+    height: min(50px, 80vw);
+    border-radius: 10px;
+    border-width: 0;
+    color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: min(1rem, 10vw);
-}
-
-.botao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    letter-spacing: min(3px, 3vw);
-    font-size: min(24px, 10vw);
-    text-decoration: none;
-    background-color: #db34c9;
-    color: #ffffff;
-    height: 70px;
-    width: min(20rem, 76vw);
-    border-radius: 10px;
-    box-shadow: 4px 5px 10px rgb(0 0 0 / 0.3);
+    font-size: min(22px, 5vw);
+    cursor: pointer;
+    box-shadow: 4px 5px 10px rgb(0 0 0 / 0.2);
     text-shadow: 2px 2px 3px rgb(0 0 0 / 0.2);
 }
 
+.yes {
+    background-color: #db34c9;
+}
+
+.no {
+    background-color: #188cfd;
+}
+
+.hide {
+    display: none;
+}
+
 .warning {
-    width: min(31.25rem, 90vw);
+    width: min(500px, 80vw);
+    font-size: min(14px, 2.6vw);
     color: #ffffff;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     text-shadow: 2px 2px 3px rgb(0 0 0 / 0.2);
 }

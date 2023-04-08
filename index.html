@@ -4,39 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tudo Pronto!</title>
+    <title>Document</title>
     <link rel="Shortcut Icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Meta Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1200125244230585');
-        fbq('init', '240487128551035');
-        fbq('track', 'AddToCart');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1200125244230585&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
 </head>
 <body>
-    <main class="elementos">
+    <main class="container">
+        <img class="logo" src="/logotipo.webp">
         <div class="box">
-            <h1 class="linha-01">Tudo Pronto!</h1>
-            <p class="linha-02">Clique no botão abaixo para continuar</p>
-            <a class="botao" href="https://bit.ly/3mPFu9g">CONTINUAR</a>
+            <div id="primeira" class="quiz">
+                <p class="num">QUESTÃO 1 DE 4:</p>
+                <div class="pergunta">
+                    <h1>Você está em um relacionamento?</h1>
+                </div>
+                <div class="resposta">
+                    <button class="btn yes" onclick="segunda()">SIM</button>
+                    <button class="btn no" onclick="segunda()">NÃO</button>
+                </div>
+            </div>
+            <div id="segunda" class="quiz hide">
+                <p class="num">QUESTÃO 2 DE 4:</p>
+                <div class="pergunta">
+                    <h1>Quem terminou o seu último relacionamento?</h1>
+                </div>
+                <div class="resposta">
+                    <button class="btn yes" onclick="terceira()">EU</button>
+                    <button class="btn no" onclick="terceira()">ELE</button>
+                </div>
+            </div>
+            <div id="terceira" class="quiz hide">
+                <p class="num">QUESTÃO 3 DE 4:</p>
+                <div class="pergunta">
+                    <h1>Você tem a mente aberta para novas descobertas no campo da psicologia e do comportamento humano?</h1>
+                </div>
+                <div class="resposta">
+                    <button class="btn yes" onclick="quarta()">SIM</button>
+                    <button class="btn no" onclick="quarta()">NÃO</button>
+                </div>
+            </div>
+            <div id="quarta" class="quiz hide">
+                <p class="num">QUESTÃO 4 DE 4:</p>
+                <div class="pergunta">
+                    <h1>Nosso vídeo de apresentação tem um limite de mulheres que podem assistir ao mesmo tempo. Você pretende assistir até o final?</h1>
+                </div>
+                <div class="resposta">
+                    <button class="btn yes" onclick="redirect()">SIM</button>
+                    <button class="btn no" onclick="redirect()">NÃO</button>
+                </div>
+            </div>
         </div>
-        <p class="warning">© 2023 - Todos os direitos reservados. Este site não faz parte nem é endossado pelo Facebook. Facebook é uma marca comercial da Meta Platforms, Inc.</p>
     </main>
+    <footer>
+        <p class="warning">© 2023 - Todos os direitos reservados. Este site não faz parte nem é endossado pelo Facebook. Facebook é uma marca comercial da Meta Platforms, Inc.</p>
+    </footer>
+    <script>
+        function segunda() {
+            document.getElementById("primeira").classList.add("hide")
+            document.getElementById("segunda").classList.remove("hide")
+        }
+        function terceira() {
+            document.getElementById("segunda").classList.add("hide")
+            document.getElementById("terceira").classList.remove("hide")
+        }
+        function quarta() {
+            document.getElementById("terceira").classList.add("hide")
+            document.getElementById("quarta").classList.remove("hide")
+        }
+        function redirect() {
+            location.href = "https://bit.ly/3mPFu9g"
+        }
+    </script>
 </body>
 </html>
